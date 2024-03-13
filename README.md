@@ -7,7 +7,10 @@ This npm package offers a straightforward utility function for sending emails th
 To incorporate this package into your project, use npm:
 
 ```
-npm install nodemailer-email-sender
+
+npm install send-email-util
+
+
 
 ```
 
@@ -15,35 +18,49 @@ npm install nodemailer-email-sender
 
 1.  **Import the Function:**
 
-    Begin by importing the `sendEmail` function from the package:
+Begin by importing the `sendEmail` function from the package:
 
-    JavaScript
+JavaScript
 
-    ```
-    import sendEmail from "nodemailer-email-sender";
+```
 
-    ```
+import sendEmail from "send-email-util";
+
+
+
+```
 
 2.  **Send Emails:**
 
-    Utilize the `sendEmail` function, passing an object containing email details:
+Utilize the `sendEmail` function, passing an object containing email details:
 
-    JavaScript
+JavaScript
 
-    ```
-    const emailObject = {
-        mail: "recipient@example.com",
-        subject: "Subject of the email",
-        message: "Content of the email",
-    };
+```
 
-    await sendEmail(emailObject);
+const emailObject = {
 
-    ```
+mail: "recipient@example.com",
 
-    - Replace `"recipient@example.com"` with the recipient's email address.
-    - Replace `"Subject of the email"` with the desired subject line.
-    - Replace `"Content of the email"` with the email body content.
+subject: "Subject of the email",
+
+message: "Content of the email",
+
+};
+
+
+
+await sendEmail(emailObject);
+
+
+
+```
+
+- Replace `"recipient@example.com"` with the recipient's email address.
+
+- Replace `"Subject of the email"` with the desired subject line.
+
+- Replace `"Content of the email"` with the email body content.
 
 **Example: Sending an Email**
 
@@ -52,13 +69,22 @@ Here's an illustrative example of sending an email:
 JavaScript
 
 ```
+
 const emailObject = {
-    mail: user.email.address,
-    subject: "Email verification token",
-    message: "Your verification token is: <token>",
+
+mail: user.email.address,
+
+subject: "Email verification token",
+
+message: "Your verification token is: <token>",
+
 };
 
+
+
 await sendEmail(emailObject);
+
+
 
 ```
 
@@ -67,8 +93,11 @@ await sendEmail(emailObject);
 This package relies on environment variables for SMTP configuration. Ensure you have these set:
 
 - `SMTP_HOST`: SMTP server hostname
+
 - `SMTP_PORT`: SMTP server port
+
 - `SMTP_USER`: SMTP username
+
 - `SMTP_PASS`: SMTP password
 
 You can define these environment variables in a `.env` file or directly within your deployment environment.
@@ -88,3 +117,7 @@ You can define these environment variables in a `.env` file or directly within y
 **Contribution**
 
 - if you have any issue or have a idea which can improve this , feel free to Raise a PR or open a new issue
+
+**Contact me**
+
+- Abhishek kumar (Twitter): [@abhirajabhi312](https://twitter.com/abhirajabhi312)
