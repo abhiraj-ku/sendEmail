@@ -45,9 +45,9 @@ npm install nodemailer-email-sender
     - Replace `"Subject of the email"` with the desired subject line.
     - Replace `"Content of the email"` with the email body content.
 
-**Example: Sending an Email Verification Token**
+**Example: Sending an Email**
 
-Here's an illustrative example of sending an email verification token:
+Here's an illustrative example of sending an email:
 
 JavaScript
 
@@ -61,8 +61,6 @@ const emailObject = {
 await sendEmail(emailObject);
 
 ```
-
-- Replace `<token>` with the actual verification token you intend to send.
 
 **Configuration**
 
