@@ -1,0 +1,20 @@
+{
+  "name": "nodemailer-email-sender",
+  "version": "1.0.0",
+  "description": "The Nodemailer Email Sender is a lightweight npm package simplifying email sending with Nodemailer in Node.js applications",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodemailer",
+    "email",
+    "mail",
+    "nodejs"
+  ],
+  "author": "Abhishek Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.9.12"
+  }
+}
