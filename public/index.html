@@ -6,66 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodemailer Email Sender</title>
     <link rel="stylesheet" href="style.css">
+
+     
 </head>
 
 <body>
-    <header>
-        <h1>Nodemailer Email Sender</h1>
-        <h4>This npm package offers a straightforward utility function for sending emails through Nodemailer.</h4>
-    </header>
-    <div class="container glass">
-        <div class="buttons">
-            <h2>Download Now</h2>
-            <a href="https://github.com/abhirajabhi312/send-email-util" class="button">GitHub</a>
-            <a href="https://www.npmjs.com/package/send-email-util" class="button">NPM Package</a>
-        </div>
+<header>
+    <h1>Nodemailer Email Sender</h1>
+    <h4>This npm package offers a straightforward utility function for sending emails through Nodemailer.</h4>
+</header>
+<div class="container glass">
+    <div class="buttons">
+        <h2>Download Now</h2>
+        <a href="https://github.com/abhirajabhi312/send-email-util" class="button">GitHub</a>
+        <a href="https://www.npmjs.com/package/send-email-util" class="button">NPM Package</a>
+    </div>
+    <div class="container">
         <div class="content">
             <h2>Installation</h2>
-            <p>To incorporate this package into your project, use npm:</p>
-            <pre><code>npm install send-email-util</code></pre>
+            <p>This project supports the following languages. See the language-specific guide:</p>
+            <ul>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Python (not published)</li>
+            </ul>
 
             <h2>Usage</h2>
-            <p>Begin by importing the <code>sendEmail</code> function from the package:</p>
-            <pre><code>import sendEmail from "send-email-util";</code></pre>
-            <p>Utilize the <code>sendEmail</code> function, passing an object containing email details:</p>
-            <pre><code>const emailObject = {
-    mail: "recipient@example.com",
-    subject: "Subject of the email",
-    message: "Content of the email",
-};
-await sendEmail(emailObject);</code></pre>
+            <ol>
+                <li><strong>Import the Function:</strong></li>
+                <ul>
+                    <li>JavaScript</li>
+                    <code>npm install send-email-util</code>
+                    <li>Python</li>
+                    <code>pip install send-email-util</code>
+                    <li>TypeScript</li>
+                    <code>npm install send-email-util</code>
+                </ul>
+                <li><strong>Send Emails:</strong></li>
+                <ul>
+                    <li>JavaScript</li>
+                    <code>import sendEmail from "send-email-util/javascript/sendEmail.js";</code>
+                    <code>// Example usage</code>
+                    <code>const emailObject = { mail: "recipient@example.com", subject: "Subject of the email", message: "Content of the email", };</code>
+                    <code>await sendEmail(emailObject);</code>
+                    <li>Python</li>
+                    <code>from send-email-util.python.send_email import send_email</code>
+                    <code>email_object = { 'mail': 'recipient@example.com', 'subject': 'Subject of the email', 'message': 'Content of the email', }</code>
+                    <code>send_email(email_object)</code>
+                    <li>TypeScript</li>
+                    <code>import sendEmail from "send-email-util/typescript/sendEmail.js";</code>
+                    <code>const emailObject = { mail: "recipient@example.com", subject: "Subject of the email", message: "Content of the email", };</code>
+                    <code>await sendEmail(emailObject);</code>
+                </ul>
+            </ol>
+            <p><strong>Note:</strong> Replace "recipient@example.com" with the recipient's email address, "Subject of
+                the email" with the desired subject line, and "Content of the email" with the email body content.</p>
 
             <h2>Configuration</h2>
             <p>This package relies on environment variables for SMTP configuration. Ensure you have these set:</p>
             <ul>
-                <li><code>SMTP_HOST</code>: SMTP server hostname</li>
-                <li><code>SMTP_PORT</code>: SMTP server port</li>
-                <li><code>SMTP_USER</code>: SMTP username</li>
-                <li><code>SMTP_PASS</code>: SMTP password</li>
+                <li>SMTP_HOST: SMTP server hostname</li>
+                <li>SMTP_PORT: SMTP server port</li>
+                <li>SMTP_USER: SMTP username</li>
+                <li>SMTP_PASS: SMTP password</li>
             </ul>
-            <p>You can define these environment variables in a <code>.env</code> file or directly within your deployment
-                environment.</p>
+            <p>You can define these environment variables in a .env file or directly within your deployment environment.
+            </p>
 
-            <div class="future-plans">
-                <h2>Future Plans/Ideas</h2>
-                <ul>
-                    <li>Add support for languages like Python, TypeScript, and GoLang</li>
-                    <li>Credential Management: Shift away from hardcoded credentials towards secure storage methods like
-                        environment variables</li>
-                    <li>Input Validation: Implement rigorous validation to prevent injection attacks and ensure only
-                        valid input is accepted</li>
-                    <li>Error Handling: Implement robust error handling to prevent leakage of sensitive information</li>
-                    <li>Authentication & Authorization: Strengthen mechanisms for authentication and authorization,
-                        including encryption and secure session management</li>
-                </ul>
-            </div>
+            <h2>🚀Future plans/ideas</h2>
+            <ul>
+                <li>Add support for languages like Python, TypeScript, and GoLang</li>
+                <li>Credential Management: Shift away from hardcoded credentials towards secure storage methods like
+                    environment variables</li>
+                <li>Input Validation: Implement rigorous validation to prevent injection attacks and ensure only valid
+                    input is accepted</li>
+                <li>Error Handling: Implement robust error handling to prevent leakage of sensitive information</li>
+                <li>Authentication & Authorization: Strengthen mechanisms for authentication and authorization,
+                    including encryption and secure session management</li>
+            </ul>
 
-            <div class="contact">
-                <h2>Contact Me</h2>
-                <p>Abhishek Kumar (Twitter): <a href="https://twitter.com/abhirajabhi312">@abhirajabhi312</a></p>
-            </div>
+            <h2>Contribution</h2>
+            <p>If you have any issue or have an idea which can improve this, feel free to raise a PR or open a new
+                issue.</p>
 
-           
+            <h2>Contact me</h2>
+            <p>Abhishek kumar (Twitter): <a href="https://twitter.com/abhirajabhi312">@abhirajabhi312</a></p>
         </div>
     </div>
 </body>
