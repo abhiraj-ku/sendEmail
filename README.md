@@ -4,15 +4,11 @@ This npm package offers a straightforward utility function for sending emails th
 
 **Installation**
 
-To incorporate this package into your project, use npm:
+This project supports the following lanuages, See the language specific guide:
 
-```
-
-npm install send-email-util
-
-
-
-```
+- javascript
+- typescript
+- python(not published)
 
 **Usage**
 
@@ -20,13 +16,24 @@ npm install send-email-util
 
 Begin by importing the `sendEmail` function from the package:
 
-JavaScript
+- JavaScript
+
+```
+npm install send-email-util
 
 ```
 
-import sendEmail from "send-email-util";
+- python
 
+```
+pip install send-email-util
 
+```
+
+- typescript
+
+```
+npm install send-email-util
 
 ```
 
@@ -37,56 +44,57 @@ Utilize the `sendEmail` function, passing an object containing email details:
 JavaScript
 
 ```
+import sendEmail from "send-email-util/javascript/sendEmail.js";
 
+// Example usage
 const emailObject = {
-
-mail: "recipient@example.com",
-
-subject: "Subject of the email",
-
-message: "Content of the email",
-
+  mail: "recipient@example.com",
+  subject: "Subject of the email",
+  message: "Content of the email",
 };
-
-
 
 await sendEmail(emailObject);
 
+```
 
+python
 
 ```
+from send-email-util.python.send_email import send_email
+
+email_object = {
+'mail': 'recipient@example.com',
+'subject': 'Subject of the email',
+'message': 'Content of the email',
+}
+
+send_email(email_object)
+
+```
+
+typescript
+
+```
+import sendEmail from "send-email-util/typescript/sendEmail.js";
+
+
+const emailObject = {
+    mail: "recipient@example.com",
+    subject: "Subject of the email",
+    message: "Content of the email",
+};
+
+await sendEmail(emailObject);
+
+```
+
+**Note**
 
 - Replace `"recipient@example.com"` with the recipient's email address.
 
 - Replace `"Subject of the email"` with the desired subject line.
 
 - Replace `"Content of the email"` with the email body content.
-
-**Example: Sending an Email**
-
-Here's an illustrative example of sending an email:
-
-JavaScript
-
-```
-
-const emailObject = {
-
-mail: user.email.address,
-
-subject: "Email verification token",
-
-message: "Your verification token is: <token>",
-
-};
-
-
-
-await sendEmail(emailObject);
-
-
-
-```
 
 **Configuration**
 
