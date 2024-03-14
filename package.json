@@ -1,6 +1,6 @@
 {
   "name": "send-email-util",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "The Nodemailer Email Sender is a lightweight npm package simplifying email sending with Nodemailer in Node.js applications",
   "main": "src/index.js",
   "scripts": {

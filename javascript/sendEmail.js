@@ -8,6 +8,21 @@ import nodemailer from "nodemailer";
  * @param {string} options.message - Body of the email.
  */
 const sendEmail = async (options) => {
+  // Check for valid email address
+  if (!options.mail || !isValidEmail(options.mail)) {
+    throw new Error("Invalid email address");
+  }
+
+  // validate subject
+  if (!options.subject || options.subject.trim() == "") {
+    throw new Error("Subject is Required");
+  }
+
+  // validate message
+  if (!options.message || options.message.trim() == "") {
+    throw new Error("Message body is required");
+  }
+
   // Create a transporter with SMTP configuration
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST, // SMTP server hostname
@@ -30,6 +45,18 @@ const sendEmail = async (options) => {
 
   // Send the email using the transporter
   await transporter.sendMail(message);
+};
+
+/**
+ * Validate email address format.
+ * @param {string} email - Email address to validate.
+ * @returns {boolean} - True if email is valid, otherwise false.
+ */
+
+const isValidEmail = (email) => {
+  // Regular expression to validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 };
 
 export default sendEmail;
